@@ -45,7 +45,6 @@ remote_file "#{Chef::Config['file_cache_path']}/git-#{node['git']['version']}.ta
   source    node['git']['url']
   checksum  node['git']['checksum']
   mode      '0644'
-  not_if "test -f #{Chef::Config['file_cache_path']}/git-#{node['git']['version']}.tar.gz"
 end
 
 # reduce line-noise-eyness
